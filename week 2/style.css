@@ -65,6 +65,11 @@ nav a:active{
     background:rgb(225,225,225,0.5);
 }
 
+nav a:visited{
+    color:black;
+    background:rgb(225,225,225,0.5);
+}
+
 /* Banner Styles */
 .banner-container {
     display: flex;
