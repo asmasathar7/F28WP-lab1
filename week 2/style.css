@@ -97,7 +97,7 @@ main h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 150px;
 }
 
 .service-column {
@@ -110,7 +110,7 @@ main h3 {
 }
 
 .service-column img {
-    width: 180px;
+    width: 300px;
     height: auto;
     margin-bottom: 10px;
 }
