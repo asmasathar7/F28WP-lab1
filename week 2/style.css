@@ -56,16 +56,12 @@ nav a {
     transition: background-color 0.3s;  /* Smooth transition for hover effect */
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     background-color: #505050;  /* Darker shade for hover */
 }
 
 nav a:active{
-    color:black;
-    background:rgb(225,225,225,0.5);
-}
-
-nav a:visited{
     color:black;
     background:rgb(225,225,225,0.5);
 }
