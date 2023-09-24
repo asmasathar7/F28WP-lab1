@@ -152,14 +152,15 @@ main h3 {
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 15px 25px;
+    background-color:green;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 15px;
     transition: background-color 0.3s;
+    font-size: x-large;
 }
 
 .cta-button:hover {
