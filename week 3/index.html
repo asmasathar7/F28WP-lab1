@@ -37,16 +37,16 @@
     </section>
 
     <script>
-      let start=0;
-      let image=[];
-      var interval=3000;
-      const images=["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/7.png","img/8.png"]
-      function changeimg(){
-        const element=document.querySelector('[name="slide"]');
-        element.src=images[start];
-        start=(start+1)%images.length;
+      let start=0;//initialising a variable
+      let image=[];//a variable that stores empty array
+      var interval=3000;//a variable that stores the value of time interval of each slides
+      const images=["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/7.png","img/8.png"]//images are stored in variable "images"
+      function changeimg(){//creating a function to change the image
+        const element=document.querySelector('[name="slide"]');// "element" to get access to each image elements by its name 
+        element.src=images[start];//making the source of the element as image of the initial indes
+        start=(start+1)%images.length;//which keeps on changing as a loop till the length of the variable image
       }
-      setInterval(changeimg,interval);
+      setInterval(changeimg,interval);//giving 3000 as the time interval of each slides
     </script>
 
     <!-- Main Content Section -->
