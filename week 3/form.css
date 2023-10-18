@@ -1,0 +1,16 @@
+/* Style for the form: setting width, auto margin for centering, padding, 
+background color, border radius for rounded corners, and font size */ 
+#form { 
+    width: 300px; 
+    margin: 20vh auto 0 auto; /* This centers the form vertically and 
+    horizontally */ 
+    padding: 20px; 
+    background-color: whitesmoke; /* Light gray background for the form */ 
+    border-radius: 4px; /* Rounded corners for the form */ 
+    font-size: 12px; 
+    } 
+    /* Style for the form's heading: setting the text color and alignment */ 
+    #form h1 { 
+    color: #0f2027; /* Dark text color for the heading */ 
+    text-align: center; /* Center-align the heading */ 
+    }
