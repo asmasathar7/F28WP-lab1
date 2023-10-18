@@ -11,16 +11,16 @@
 <form id="form">
     <h1>Sign Up Form</h1>
     <label>Name</label>
-    <input name="Name"><br>
+    <input type="text" placeholder="Name" name="Name"><br>
     <div class="error" id="nameerror"></div>
     <label>Email</label>
-    <input type="email" name="email"><br>
+    <input type="email" placeholder="Email" name="email"><br>
     <div class="error" id="emailerror"></div>
     <label>Password</label>
-    <input type="password" name="password"><br>
+    <input type="password" placeholder="Password" name="password"><br>
     <div class="error" id="passworderror"></div>
     <label>Confirm Password</label>
-    <input type="password" name="password"><br>
+    <input type="password" placeholder="Confirm Password" name="confirm password"><br>
     <div class="error" id="confirmpassworderror"> </div>
 
     <button type="submit">Sign Up</button>
@@ -34,7 +34,7 @@
     form.addEventListener("submit",function(event){
         let valid=true;
 
-        const nameContent=form.elements["name"];
+        const nameContent=form.elements["Name"];
         if (nameContent.value.trim()==="" ){
             valid=false;
             document.getElementById("nameerror").textContent="Name is required";
@@ -56,7 +56,7 @@
             valid=false;
             document.getElementById(passworderror).textContent="Must have atleast 8 characters";
         }
-        const confirmpasswordContent=form.element["confirmpassword"];
+        const confirmpasswordContent=form.element["Confirm Password"];
         if(confirmpasswordContent.value.trim()===""){
             valid=false;
             document.getElementById("confirmpassworderror").textContent="Confirm Pasword is required";
