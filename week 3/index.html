@@ -34,8 +34,21 @@
 
     <!-- Banner Section -->
     <section class="banner-container">
-      <img src="img/travel banner.svg" alt="Illustrative banner of travel destinations" class="centered-banner">
+      <img name="slide" alt="Alt goes here" title="Slideshow"  width="70%"/>
     </section>
+
+    <script>
+      let start=0;
+      let image=[];
+      var interval=3000;
+      const images=["img/1.jpeg","img/2.jpeg","img/3.jpeg","img/4.jpeg","img/5.jpeg","img/6.jpeg","img/7.jpeg","img/8.jpeg"]
+      function changeimg(){
+        const element=document.querySelector('[name="slide"]');
+        element.src=img[start];
+        start=(start+1)%img.length;
+      }
+      setInterval(changeimg,interval);
+    </script>
 
     <!-- Main Content Section -->
     <main class="services">
