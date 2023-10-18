@@ -8,12 +8,79 @@
 
 </head>
 <form id="form">
-    <h1>Registration Form</h1>
+    <h1>Sign Up Form</h1>
     <label>Name</label>
     <input name="Name"><br>
-    
+    <div class="error" id="nameerror"></div>
+    <label>Email</label>
+    <input type="email" name="email"><br>
+    <div class="error" id="emailerror"></div>
+    <label>Password</label>
+    <input type="password" name="password"><br>
+    <div class="error" id="passworderror"></div>
+    <label>Confirm Password</label>
+    <input type="password" name="password"><br>
+    <div class="error" id="confirmpassworderror"> </div>
+
+    <button type="submit">Sign Up</button>
+
+
 
 </form>
+
+<script>
+    const form=document.getElementById("form");
+    form.addEventListener("submit",function(event){
+        let valid=true;
+
+        const nameContent=form.elements["name"];
+        if (nameContent.value.trim()==="" ){
+            valid=false;
+            document.getElementById("nameerror").textContent="Name is required";
+        }   
+        const emailContent=form.elements["email"];
+        if (emailContent.value.trim()===""){
+            vaild=false;
+            document.getElementById("emailerror").textContent="Email is required";
+        }  else if(!emailContent.value.trim().toLowerCase().endswith("@gmail.com")){
+            vaild=false;
+            document.getElementById("emailerror").textContent="Give correct gmail address";
+        }
+
+        const passwordContent=form.element["password"];
+        if(passwordContent.value.trim()===""){
+            valid=false;
+            document.getElementById("passworderror").textContent="Password is required";
+        } else if(!passwordContent.value.trim().length>=8){
+            valid=false;
+            document.getElementById(passworderror).textContent="Must have atleast 8 characters";
+        }
+        const confirmpasswordContent=form.element["confirmpassword"];
+        if(confirmpasswordContent.value.trim()===""){
+            valid=false;
+            document.getElementById("confirmpassworderror").textContent="Confirm Pasword is required";
+        }  else if(passwordContent.value.trim()!==confirmpasswordContent.value.trim()){
+            valid=false;
+            document.getElementById("confirmpassworderror").textContent="password does not match";
+        }
+
+        if(!valid){
+            event.preventDefault()
+        }else{
+            alert("form is submitted");
+        }
+
+
+
+    })
+
+
+
+       
+
+
+
+</script>
 
 
 </html>
