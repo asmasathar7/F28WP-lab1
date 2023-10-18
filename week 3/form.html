@@ -48,7 +48,7 @@
             document.getElementById("emailerror").textContent="Give correct gmail address";
         }
 
-        const passwordContent=form.element["password"];
+        const passwordContent=form.elements["password"];
         if(passwordContent.value.trim()===""){
             valid=false;
             document.getElementById("passworderror").textContent="Password is required";
@@ -56,7 +56,7 @@
             valid=false;
             document.getElementById("passworderror").textContent="Must have atleast 8 characters";
         }
-        const confirmpasswordContent=form.element["confirmpassword"];
+        const confirmpasswordContent=form.elements["confirmpassword"];
         if(confirmpasswordContent.value.trim()===""){
             valid=false;
             document.getElementById("confirmpassworderror").textContent="Confirm Pasword is required";
