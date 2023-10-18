@@ -20,7 +20,7 @@
     <input type="password" placeholder="Password" name="password"><br>
     <div class="error" id="passworderror"></div>
     <label>Confirm Password</label>
-    <input type="password" placeholder="Confirm Password" name="confirm password"><br>
+    <input type="password" placeholder="Confirm Password" name="confirmpassword"><br>
     <div class="error" id="confirmpassworderror"> </div>
 
     <button type="submit">Sign Up</button>
@@ -41,10 +41,10 @@
         }   
         const emailContent=form.elements["email"];
         if (emailContent.value.trim()===""){
-            vaild=false;
+            valid=false;
             document.getElementById("emailerror").textContent="Email is required";
-        }  else if(!emailContent.value.trim().toLowerCase().endswith("@gmail.com")){
-            vaild=false;
+        }  else if(!emailContent.value.trim().toLowerCase().endsWith("@gmail.com")){
+            valid=false;
             document.getElementById("emailerror").textContent="Give correct gmail address";
         }
 
@@ -52,11 +52,11 @@
         if(passwordContent.value.trim()===""){
             valid=false;
             document.getElementById("passworderror").textContent="Password is required";
-        } else if(!passwordContent.value.trim().length>=8){
+        } else if(passwordContent.value.trim().length<8){
             valid=false;
-            document.getElementById(passworderror).textContent="Must have atleast 8 characters";
+            document.getElementById("passworderror").textContent="Must have atleast 8 characters";
         }
-        const confirmpasswordContent=form.element["Confirm Password"];
+        const confirmpasswordContent=form.element["confirmpassword"];
         if(confirmpasswordContent.value.trim()===""){
             valid=false;
             document.getElementById("confirmpassworderror").textContent="Confirm Pasword is required";
