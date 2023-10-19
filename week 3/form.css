@@ -62,7 +62,7 @@ block-level display, font size, padding, full width */
     } 
     /* Style for the error message: text color, font size, and height */ 
     .input-control .error { 
-    color: #ff3860; /* Red text color for error messages */ 
+    border-color: #ff3860; /* Red text color for error messages */ 
     font-size: 9px; /* Smaller font size for error messages */ 
     height: 13px; /* Explicit height to ensure consistent spacing */ 
     }
