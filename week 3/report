@@ -1,1 +1,4 @@
-
+I started creating my slideshow by taking pictures from canva then i made a folder for it and named it as img.Then i gave the links in my banner container.
+With that i had my pictures.Now i wanted to create a slideshow or that i used javascript in my html code itself.But then i actually didn't get an idea of how
+to do it because i was new to javascript.But then with the understanding of professor's explanation i got an idea of how to do it.So first i needed to access
+my images,for that i used queryselector
