@@ -45,12 +45,12 @@
         const nameContent=form.elements["Name"];//storing the content of name input in nameContent
         if (nameContent.value.trim()==="" ){//checking if the value inside nameContent is empty and giving certain error message
             valid=false;
-            document.getElementById("nameerror").classList.add("error").textContent="Name is required";//the error message content is in the div tag which has id name as nameerrorz
+            document.getElementById("nameerror").textContent="Name is required";//the error message content is in the div tag which has id name as nameerrorz
         }   
         const emailContent=form.elements["email"];//storing the content of email input in emailContent
         if (emailContent.value.trim()===""){//checking if the value inside emailContent is empty and giving certain error message
             valid=false;
-            document.getElementById("emailerror").classList.add("error").textContent="Email is required";
+            document.getElementById("emailerror").textContent="Email is required";
         }  else if(!emailContent.value.trim().toLowerCase().endsWith("@gmail.com")){//also checking if email id is in the correct format 
             valid=false;
             document.getElementById("emailerror").textContent="Give correct gmail address";//giving error messsage to the element having id as emailerror
