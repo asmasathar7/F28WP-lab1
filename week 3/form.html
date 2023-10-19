@@ -15,25 +15,21 @@
     <label>Name</label>
     <input type="text" placeholder="Name" name="Name"><br>
     <div class="error" id="nameerror"></div>
-    <div class="success" id="namesuccess"></div>
     </div>
     <div class="input-control">
     <label>Email</label>
     <input type="email" placeholder="abc@gmail.com" name="email"><br>
     <div class="error" id="emailerror"></div>
-    <div class="success" id="emailsuccess"></div>
     </div>
     <div class="input-control">
     <label>Password</label>
     <input type="password" placeholder="Password" name="password"><br>
     <div class="error" id="passworderror"></div>
-    <div class="success" id="passwordsuccess"></div>
     </div>
     <div class="input-control">
     <label>Confirm Password</label>
     <input type="password" placeholder="Confirm Password" name="confirmpassword"><br>
     <div class="error" id="confirmpassworderror"> </div>
-    <div class="success" id="confirmpasswordsuccess"></div>
     </div>
     <button type="submit">Sign Up</button>
 
@@ -91,7 +87,7 @@
             document.getElementById("confirmpassworderror").textContent="password does not match";//giving errormessage for the specified condition become4s true
             document.getElementById("confirmpassworderror").classlist.add("error");
         } else{
-            document.getElementById("confirmpasswordsuccess").classlist.add("success");
+              document.getElementById("passwordsuccess").classlist.add("success");
         }
 
         if(!valid){//if the temporary variable becomes false
