@@ -44,14 +44,14 @@
 
         const nameContent=form.elements["Name"];//storing the content of name input in nameContent
         if (nameContent.value.trim()==="" ){//checking if the value inside nameContent is empty and giving certain error message
-            valid=false;
             nameContent.classList.add("error");
             document.getElementById("nameerror").textContent="Name is required";//the error message content is in the div tag which has id name as nameerror
+            valid=false;
            
         } else{
-            valid=true;
             nameContent.classList.remove("error");
             nameContent.classList.add("success");
+            valid=true;
 
         }
         const emailContent=form.elements["email"];//storing the content of email input in emailContent
