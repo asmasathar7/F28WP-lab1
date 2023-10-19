@@ -45,49 +45,32 @@
         const nameContent=form.elements["Name"];//storing the content of name input in nameContent
         if (nameContent.value.trim()==="" ){//checking if the value inside nameContent is empty and giving certain error message
             valid=false;
-            document.getElementById("nameerror").textContent="Name is required";//the error message content is in the div tag which has id name as nameerror
-            document.getElementById("nameerror").classlist.add("error");
-        } else{  
-            document.getElementById("namesuccess").classlist.add("success");
-
-        }  
+            document.getElementById("nameerror").textContent="Name is required";//the error message content is in the div tag which has id name as nameerrorz
+        }   
         const emailContent=form.elements["email"];//storing the content of email input in emailContent
         if (emailContent.value.trim()===""){//checking if the value inside emailContent is empty and giving certain error message
             valid=false;
             document.getElementById("emailerror").textContent="Email is required";
-            document.getElementById("emailerror").classlist.add("error");
         }  else if(!emailContent.value.trim().toLowerCase().endsWith("@gmail.com")){//also checking if email id is in the correct format 
             valid=false;
             document.getElementById("emailerror").textContent="Give correct gmail address";//giving error messsage to the element having id as emailerror
-            document.getElementById("emailerror").classlist.add("error");
-        } else{
-            document.getElementById("emailsuccess").classlist.add("success");
         }
 
         const passwordContent=form.elements["password"];//storing the content of password input in passwordContent
         if(passwordContent.value.trim()===""){//checking if the value inside passwordContent is empty and giving certain error message
             valid=false;
             document.getElementById("passworderror").textContent="Password is required";
-            document.getElementById("passworderror").classlist.add("error");
         } else if(passwordContent.value.trim().length<8){//also checking if it is not a strong password having less than 8 characters 
             valid=false;
             document.getElementById("passworderror").textContent="Must have atleast 8 characters";//then giving an error message
-            document.getElementById("passworderror").classlist.add("error");
-        }else{
-            document.getElementById("passwordsuccess").classlist.add("success");
-
         }
         const confirmpasswordContent=form.elements["confirmpassword"];//storing the content of confirmpassword input in confirmpasswordContent
         if(confirmpasswordContent.value.trim()===""){//checking if the value inside confirmpasswordContent is empty and giving certain error message
             valid=false;
             document.getElementById("confirmpassworderror").textContent="Confirm Pasword is required";
-            document.getElementById("confirmpassworderror").classlist.add("error");
         }  else if(passwordContent.value.trim()!==confirmpasswordContent.value.trim()){//also checking if the value inisde passwordcontent and confirmpasswordconten are not matching
             valid=false;
             document.getElementById("confirmpassworderror").textContent="password does not match";//giving errormessage for the specified condition become4s true
-            document.getElementById("confirmpassworderror").classlist.add("error");
-        } else{
-              document.getElementById("passwordsuccess").classlist.add("success");
         }
 
         if(!valid){//if the temporary variable becomes false
