@@ -1,0 +1,9 @@
+                                                     My SlideShow Creation
+
+I started creating my slideshow by taking pictures from canva then i made a folder for it and named it as img.Then i gave the links in my banner container.
+With that i had my pictures.Now i wanted to create a slideshow for that i used javascript in my html code itself.But then i actually didn't get an idea of how
+to do it because i was new to javascript.But then with the understanding of professor's explanation i got an idea of how to do it.So first i needed to access
+my images,for that i used querySelector.Before that i had a variable which gets incremented when each image elements are stored which is like a loop.With that i
+was able to present my images.But then there should be a time interval for the images to keep changing,for that i set my interval using setinterval.With all these 
+process i was able to create my slide show perfectly.Then i viewed my website but then i wasn't satisfied with my margin so i used css to change my margin top.
+Then it looked perfect and I was satisfied.
