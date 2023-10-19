@@ -40,57 +40,70 @@
 <script>
     const form=document.getElementById("form");//accessing the form using its id
     form.addEventListener("submit",function(event){
-        let valid=true;
+        let run=true;
 
         const nameContent=form.elements["Name"];//storing the content of name input in nameContent
         if (nameContent.value.trim()==="" ){//checking if the value inside nameContent is empty and giving certain error message
             nameContent.classList.add("error");
             document.getElementById("nameerror").textContent="Name is required";//the error message content is in the div tag which has id name as nameerror
-            valid=false;
+            run=false;
            
         } else{
             nameContent.classList.remove("error");
             nameContent.classList.add("success");
-            valid=true;
+            run=true;
 
         }
         const emailContent=form.elements["email"];//storing the content of email input in emailContent
         if (emailContent.value.trim()===""){//checking if the value inside emailContent is empty and giving certain error message
             document.getElementById("emailerror").textContent="Email is required";
             emailContent.classList.add("error");
-            vaild=false;
+            run=false;
         }  else if(!emailContent.value.trim().toLowerCase().endsWith("@gmail.com")){//also checking if email id is in the correct format 
             document.getElementById("emailerror").textContent="Give correct gmail address";//giving error messsage to the element having id as emailerror
             emailContent.classList.add("error");
-            valid=false;
+            run=false;
         }else{
-            emailContent.classList.add("error");
-            emailContent.classList.add("error");
-            valid=true;
+            emailContent.classList.remove("error");
+            emailContent.classList.add("success");
+            run=true;
             
         }
 
         const passwordContent=form.elements["password"];//storing the content of password input in passwordContent
         if(passwordContent.value.trim()===""){//checking if the value inside passwordContent is empty and giving certain error message
-            valid=false;
             document.getElementById("passworderror").textContent="Password is required";
+            passwordContent.classList.add("error");
+            run=false;
         } else if(passwordContent.value.trim().length<8){//also checking if it is not a strong password having less than 8 characters 
-            valid=false;
             document.getElementById("passworderror").textContent="Must have atleast 8 characters";//then giving an error message
+            passwordContent.classList.add("error");
+            run=false;
+        }else{
+            passwordContent.classList.remove("error");
+            passwordContent.classList.add("success");
+            run=true;
         }
         const confirmpasswordContent=form.elements["confirmpassword"];//storing the content of confirmpassword input in confirmpasswordContent
         if(confirmpasswordContent.value.trim()===""){//checking if the value inside confirmpasswordContent is empty and giving certain error message
-            valid=false;
             document.getElementById("confirmpassworderror").textContent="Confirm Pasword is required";
+            confirmpasswordContent.classList.add("error");
+            run=false;
         }  else if(passwordContent.value.trim()!==confirmpasswordContent.value.trim()){//also checking if the value inisde passwordcontent and confirmpasswordconten are not matching
-            valid=false;
             document.getElementById("confirmpassworderror").textContent="password does not match";//giving errormessage for the specified condition become4s true
+            confirmpasswordContent.classList.add("error");
+            run=false;
+        }else{
+            confirmpasswordContent.classList.add("error");
+            confirmpasswordContent.classList.add("success")
+            run=true;
         }
 
-        if(!valid){//if the temporary variable becomes false
+        if(!run){//if the temporary variable becomes false
             event.preventDefault()//it will prevent from submitting
         }else{
             alert("form is submitted");///else it gets submitted and gives an alert box informing the user that the form is submitted
+            
         }
 
 
