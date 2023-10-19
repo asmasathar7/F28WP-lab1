@@ -52,10 +52,6 @@ block-level display, font size, padding, full width */
 } 
  
 /* Style for input fields with class "success": green border */ 
-/*.input-control .success input { 
-    border-color: #09c372; /* Green border to indicate successful input  
-}*/
-
 .input-control .success  { 
     border-color: #09c372; /* Green border to indicate successful input */ 
 }

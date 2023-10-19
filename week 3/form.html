@@ -44,13 +44,14 @@
 
         const nameContent=form.elements["Name"];//storing the content of name input in nameContent
         if (nameContent.value.trim()==="" ){//checking if the value inside nameContent is empty and giving certain error message
-            nameContent.classList.add("error");
+            nameContent.classList.add("error");//adding the error class name to get the css for the that specified class name
             document.getElementById("nameerror").textContent="Name is required";//the error message content is in the div tag which has id name as nameerror
             run=false;
            
         } else{
-            nameContent.classList.remove("error");
-            nameContent.classList.add("success");
+            nameContent.classList.remove("error");//to remove error class when it is not empty
+            nameContent.classList.add("success");//to add success class so that to provide the css for that class
+            document.getElementById("nameerror").textContent="";//to remove the error message if it doesnt have errors
             run=true;
 
         }
@@ -66,6 +67,7 @@
         }else{
             emailContent.classList.remove("error");
             emailContent.classList.add("success");
+            document.getElementById("emailerror").textContent="";
             run=true;
             
         }
@@ -82,6 +84,7 @@
         }else{
             passwordContent.classList.remove("error");
             passwordContent.classList.add("success");
+            document.getElementById("passworderror").textContent="";
             run=true;
         }
         const confirmpasswordContent=form.elements["confirmpassword"];//storing the content of confirmpassword input in confirmpasswordContent
@@ -96,6 +99,7 @@
         }else{
             confirmpasswordContent.classList.add("error");
             confirmpasswordContent.classList.add("success")
+            document.getElementById("confirmpassworderror").textContent="";
             run=true;
         }
 
