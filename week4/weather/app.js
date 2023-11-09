@@ -20,7 +20,7 @@ button.addEventListener("click",function(){
                     renderHTML(ourData);
                     button.classList.add("hide-me");
                 } else {
-                    alert("HTTP error: " + ourRequest.status);
+                    alert("please give another city name");
                 }
             };
     
