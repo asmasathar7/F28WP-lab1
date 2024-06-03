@@ -33,9 +33,11 @@ button.addEventListener("click",function(){
 });
 //creating div to store the weather data
 function renderHTML(ourData) {
+    let tempcel=ourData.main.temp-273.15;
+    tempcel=parseInt(tempcel);
     var weather = document.createElement("div");
     weather.innerHTML = ` <p> The Weather in ${ourData.name} is ${ourData.weather[0].description}. </p>
-    <p> The temperature is ${ourData.main.temp}°C with a windspeed of ${ourData.wind.speed} m/s. </p>`;
+    <p> The temperature is ${tempcel}°C with a windspeed of ${ourData.wind.speed} m/s. </p>`;
        
     //clearing the previous weather data    
     weatherInfo.innerHTML = "";
